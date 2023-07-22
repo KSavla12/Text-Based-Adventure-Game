@@ -10,12 +10,13 @@ class Hallway(Scene):
 
     def intro(self):
         dialogue = dedent("""
-            You enter the house into the hallway. You find to your surprise the lights are on, emitting a dim
-            glow. The place is old and tattered and you feel an eerie vibe in the atmosphere. You hear a creaking
-            of the floor board from up above, perhaps it was just a rat?
+            You step inside the house and find yourself in a dimly lit hallway, illuminated by flickering lights 
+            that catch you off guard. The worn-out and dilapidated state of the place creates an unsettling ambiance. 
+            Suddenly, a creaking sound emanates from the floor above. You ponder whether it's merely a rat scurrying 
+            about.
 
-            There seems to be a kitchen straight down the hallway. On the left is a door with a sign labelled
-            "cellar", and a staircase leading upwards to your right.
+            Straight ahead, at the end of the hallway, you spot a kitchen. To your left, there's a door marked 
+            "cellar," and to your right, a staircase ascends to the upper level.
             """)
         self.scene.text_roll(dialogue)
         Scene.intro_hallway = True

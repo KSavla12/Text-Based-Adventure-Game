@@ -18,14 +18,16 @@ class GoldRoom(Scene):
         Scene.checkpoint = 'hallway'
 
         dialogue = dedent("""
-            Using your lantern to illuminate the darkness you head down into the cellar where there is a narrow
-            corridor carved out in stone. You follow it down a long way until you reach a big room with a pile of
-            gold coins in the centre. High up from the spot is a crevice leading up above ground, what looks
-            to be a wishing well.
+            Armed with your trusty lantern, you cautiously descend into the cellar, its dark depths illuminated 
+            by the light. A narrow stone corridor stretches before you, leading you deeper underground. You 
+            follow the passageway for what feels like an eternity until you finally arrive in a sizable room. In 
+            the center lies a captivating sight—a heap of gleaming gold coins. Above, a crevice reveals itself, 
+            seemingly a pathway back to the surface resembling a wishing well.
 
-            As you walk towards the centre you hear heavy footsteps coming towards you from across the room. As
-            it comes into the light you see a monstrous troll standing before you, welding a big wooden club.
-
+            However, your attention is swiftly diverted as you catch the sound of heavy footsteps resonating 
+            across the room. As the source of the sound steps into the light, a monstrous troll emerges, wielding 
+            a massive wooden club. 
+                
             You prepare for battle.
             """)
         self.scene.text_roll(dialogue)
@@ -108,8 +110,11 @@ class GoldRoom(Scene):
             return self.death.death(Scene.checkpoint)
 
         elif Health.troll_hp <= 0:
-            print("You win!")
-            print("bla bla bla")
+            print(dedent("""
+            You stand victorious, catching your breath, as the room falls into a silence broken only by your 
+            own heartbeat. The pile of gold coins serves as a testament to your triumph over the formidable 
+            foe.
+            """))
             print("TO BE CONTINUED...")
             print("\nPress any key to quit")
             i = input(">")

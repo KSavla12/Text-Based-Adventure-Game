@@ -12,8 +12,12 @@ class Kitchen(Scene):
     def enter(self):
 
         dialogue = dedent("""
-            Feeling famished you make your way to the kitchen. Unexpectedly you find a bottle of water on the
-            counter top and an uneaten snack on the dinner table.
+            Feeling famished you proceed down the hallway and enter the kitchen. Surprisingly, you spot a 
+            bottle of water sitting on the countertop, providing a glimmer of relief for your parched throat. 
+            Additionally, an untouched snack lying upon the dinner table.          
+            
+            The discovery brings a mix of gratitude and curiosity as you ponder who or what might have left 
+            these provisions behind in this desolate place.
             """)
         self.scene.text_roll(dialogue)
 
