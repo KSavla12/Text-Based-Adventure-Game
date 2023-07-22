@@ -35,8 +35,9 @@ class Room1(Scene):  #bedroom
 
             elif action == "take lantern":
                 print(dedent("""
-                You take the lantern and turn to head out when a dark hooded figure appears, blocking your path. He
-                draws a knife.  -obtained lantern-
+                As you reach for the lantern and prepare to make your way out, a sudden chill runs down your spine. 
+                Before you stands a mysterious figure, draped in a dark hood, effectively obstructing your path. He
+                draws a knife. -obtained lantern-
                 """))
 
                 while True:
@@ -145,9 +146,11 @@ class Room2(Scene):
 
     def enter(self):
         dialogue = dedent("""
-            you step inside a pitch-black room. An arm reaches out behind you covering your mouth as you start to
-            lose consciousness.
-
+            As you enter the pitch-black room, a sudden dread envelops you. Before you can react, an arm emerges 
+            from behind, swiftly covering your mouth, cutting off your ability to call for help. A 
+            wave of dizziness washes over you, and your vision fades as you gradually lose 
+            consciousness.
+                          
             - DEAD -
             """)
         self.scene.text_roll(dialogue)

@@ -12,9 +12,10 @@ class Stairway(Scene):
         Scene.checkpoint = 'stairway'
 
         dialogue = dedent("""
-            As you reach to the top of the staircase from the corner of your eye you catch a sudden glimpse of the
-            door to your left close shut without a sound. Was that just your imagination? The door is labelled 
-            "Storage Room". There is an old cabinet beside it and another room of a bedroom lies in front of you.
+            As you reach the top of the staircase, a flicker of movement catches your attention. 
+            Out of the corner of your eye, you witness the door to your left abruptly shutting, without a sound.              
+            Was it a figment of your imagination, or something more unsettling? The door is labelled 
+            "Storage Room". There is an old cabinet beside it and ahead of you lies what looks to be a bedroom.
             """)
         self.scene.text_roll(dialogue)
         Scene.intro_stairway = True
@@ -30,7 +31,7 @@ class Stairway(Scene):
             if action == ("bedroom") or action == ("enter bedroom"):
                 return "room1"
 
-            elif action == (("left room") or action == ("storage room")) and Scene.cabinet == False:
+            elif (action == "left room" or action == "storage room") and Scene.cabinet == False:
                 return "room2"
 
             elif (action == ("move cabinet") or action == ("push cabinet") or action == ("block door")) and Scene.cabinet == False:
